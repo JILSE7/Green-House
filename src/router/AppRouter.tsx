@@ -1,5 +1,5 @@
 
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/home/page';
 import UserPage from '../pages/users/page';
 import GlossaryPage from '../pages/glossary/page';
@@ -9,7 +9,7 @@ import { Header } from '../components';
 const AppRouter = () => {
   return (
     <div className='app'>
-      <HashRouter basename = {import.meta.env.BASE_URL} >
+      <BrowserRouter  basename={import.meta.env.DEV ? '/' : '/Green-House/'} >
         <Header />
         <Routes>
           <Route path='/home' element={<HomePage />} />
@@ -18,8 +18,7 @@ const AppRouter = () => {
           <Route path='/' element={<GlossaryPage />} />
           <Route path='/log' element={<UserPage />} />
         </Routes>
-
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
