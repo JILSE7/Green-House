@@ -1,0 +1,1 @@
+export * from './termGlosary.model';

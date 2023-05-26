@@ -1,0 +1,11 @@
+@import '../globals.css';
+
+.blue_button {
+  background-color: var(--blue-color);
+  border-radius: 4px;
+  color: var(--white-color);
+  font-size: 14px;
+  padding: 10px 18px;
+  width: 110px;
+  font-weight: 700;
+}

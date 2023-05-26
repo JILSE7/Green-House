@@ -1,0 +1,179 @@
+.hero_card_container {
+  width: 1116px;
+  height: 340px;
+  background: radial-gradient(77.73% 932.35% at 22.27% 59.56%, rgba(254, 249, 195, 0.69) 0%, rgba(254, 249, 195, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  padding: 24px 32px;
+}
+
+.hero_card_glossary {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.hero_card_separator {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 16px 0px;
+}
+
+.hero_card_main_title {
+  font-size: 20px;
+  width: 534px;
+  color: #262626;
+}
+
+.hero_card_main_title > h1 {
+  font-size: 32px;
+  font-family: 'Lora-Bold';
+  line-height: 40.96px;
+  font-weight: 700;
+}
+
+.hero_card_main_title > p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.hero_card_main_mural_willowy {
+  background-image: url('/src/assets/images/willowy_hr_girl.png');
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  left: -344px;
+  top: -88px;
+  z-index: 5;
+}
+
+.hero_card_main_mural_williwy_open_book {
+  background-image: url('/src/assets/images/willowy_open_book.png');
+  width: 116px;
+  height: 101px;
+  position: absolute;
+  top: -45px;
+  right: 266px;
+  z-index: 1;
+}
+
+.hero_card_main_mural_williwy_stack_books {
+  background-image: url('/src/assets/images/willowy_stack_books.png');
+  width: 96.67px;
+  height: 71.37px;
+  position: absolute;
+  top: 35px;
+  right: 100px;
+  z-index: 1;
+}
+
+.hero_card_main_container_input_search{
+  background-color: var(--white-color);
+  width: 100%;
+  padding: 20px 16px;
+  height: 40px;
+}
+
+.hero_card_main_container_input_search > svg{
+  width: 30px;
+  height: 30px;
+}
+
+.hero_card_main_input_search{
+  width: 100%;
+  background-color: transparent;
+  font-size: 14px;
+  height: 40px;
+}
+
+.hero_card_main_input_search::placeholder {
+  font-size: 14px;
+}
+
+.hero_card_main_input_search:focus {
+  outline: none;
+}
+
+/*
+Menu
+*/
+
+.glossary_abc_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1116px;
+  /* border: 1px solid black; */
+}
+
+.glossary_abc_menu {
+  font-family: 'Santoshi';
+  padding: 24px 16px;
+  width: 936px;
+  display: flex;
+  justify-content: center;
+  color: var(--gray-secondary-color);
+  font-weight: 700;
+}
+
+.glossary_abc_menu_letter {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  transition: all 0.1s ease-in-out;
+}
+
+.glossary_abc_menu_letter_active, .glossary_abc_menu_letter:hover {
+  border-radius: 50%;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+
+
+.glossary_abc_content {
+  @apply flex flex-col items-center;
+  width: 1068px;
+  padding: 32px 24px;
+  background-color: var(--white-color);
+}
+
+.glossary_abc_content_card {
+  height: auto;
+  padding: 0px;
+}
+
+.glossary_abc_content_card_letter  {
+  margin-bottom: 32px;
+}
+
+.glossary_abc_content_card_letter > span  {
+  font-family: 'Lora-Bold';
+  color: var(--dark-color);
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0px !important;
+  line-height: 40px;
+}
+
+.glossary_abc_content_card_letter_active > span {
+  color: var(--orange-color);
+}
+
+
+.glossary_abc_content_card_terms {
+  font-size: 16px;
+  padding: 0px 8px;
+  display: flex;
+}
+
+.glossary_abc_content_card_terms_column {
+  width: 267px;
+  /* border: 1px solid black; */
+}
+
+.glossary_abc_content_card_terms_item {
+  margin-bottom: 24px;
+}
+
+.glossary_abc_content_card_terms_item:last-child {
+  margin-bottom: 0px;
+}

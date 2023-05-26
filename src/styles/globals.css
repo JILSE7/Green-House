@@ -1,0 +1,310 @@
+:root{
+  --app-background-color: #f8fafc;
+  --white-color: #ffffff;
+  --gray-color: #A3A3A3;
+  --gray-secondary-color: #737373;
+  --blue-color: #1874D0;
+  --dark-color: #262626;
+  --orange-color: #EA580C;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Satoshi-Variable";
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  */
+}
+
+html {
+  background-color: var(--app-background-color);
+}
+
+.container {
+  width: 20000px !important;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col mx-auto;
+  max-width: 1440px;
+  padding-bottom: 54px;
+}
+
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+
+
+/**
+ * @license
+ *
+ * Font Family: Satoshi
+ * Designed by: Deni Anggara
+ * URL: https://www.fontshare.com/fonts/satoshi
+ * © 2022 Indian Type Foundry
+ *
+ * Font Styles:
+ * Satoshi Variable(Variable font)
+ * Satoshi Variable Italic(Variable font)
+ * Satoshi Light
+ * Satoshi Light Italic
+ * Satoshi Regular
+ * Satoshi Italic
+ * Satoshi Medium
+ * Satoshi Medium Italic
+ * Satoshi Bold
+ * Satoshi Bold Italic
+ * Satoshi Black
+ * Satoshi Black Italic
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('./fonts/Satoshi-Variable.woff2') format('woff2'),
+      url('./fonts/Satoshi-Variable.woff') format('woff'),
+      url('./fonts/Satoshi-Variable.ttf') format('truetype');
+      font-weight: 300 900;
+      font-display: swap;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf');
+      font-weight: 300 900;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('./fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+      url('./fonts/Satoshi-VariableItalic.woff') format('woff'),
+      url('./fonts/Satoshi-VariableItalic.ttf') format('truetype');
+      font-weight: 300 900;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url('./fonts/Satoshi-Light.woff2') format('woff2'),
+      url('./fonts/Satoshi-Light.woff') format('woff'),
+      url('./fonts/Satoshi-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-LightItalic';
+  src: url('./fonts/Satoshi-LightItalic.woff2') format('woff2'),
+      url('./fonts/Satoshi-LightItalic.woff') format('woff'),
+      url('./fonts/Satoshi-LightItalic.ttf') format('truetype');
+      font-weight: 300;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('./fonts/Satoshi-Regular.woff2') format('woff2'),
+      url('./fonts/Satoshi-Regular.woff') format('woff'),
+      url('./fonts/Satoshi-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src: url('./fonts/Satoshi-Italic.woff2') format('woff2'),
+      url('./fonts/Satoshi-Italic.woff') format('woff'),
+      url('./fonts/Satoshi-Italic.ttf') format('truetype');
+      font-weight: 400;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('./fonts/Satoshi-Medium.woff2') format('woff2'),
+      url('./fonts/Satoshi-Medium.woff') format('woff'),
+      url('./fonts/Satoshi-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-MediumItalic';
+  src: url('./fonts/Satoshi-MediumItalic.woff2') format('woff2'),
+      url('./fonts/Satoshi-MediumItalic.woff') format('woff'),
+      url('./fonts/Satoshi-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('./fonts/Satoshi-Bold.woff2') format('woff2'),
+      url('./fonts/Satoshi-Bold.woff') format('woff'),
+      url('./fonts/Satoshi-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src: url('./fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+      url('./fonts/Satoshi-BoldItalic.woff') format('woff'),
+      url('./fonts/Satoshi-BoldItalic.ttf') format('truetype');
+      font-weight: 700;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Black';
+  src: url('./fonts/Satoshi-Black.woff2') format('woff2'),
+      url('./fonts/Satoshi-Black.woff') format('woff'),
+      url('./fonts/Satoshi-Black.ttf') format('truetype');
+      font-weight: 900;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BlackItalic';
+  src: url('./fonts/Satoshi-BlackItalic.woff2') format('woff2'),
+      url('./fonts/Satoshi-BlackItalic.woff') format('woff'),
+      url('./fonts/Satoshi-BlackItalic.ttf') format('truetype');
+      font-weight: 900;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Lora-Bold';
+  src: url('./fonts/Lora-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Lora-BoldItalic';
+  src: url('./fonts/Lora-BoldItalic.ttf') format('truetype');
+      font-weight: 700;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Lora-Variable';
+  src: url('./fonts/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+      font-weight: 300 900;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Lora-Italic';
+  src: url('./fonts/Satoshi-Italic.woff2') format('truetype');
+      font-weight: 400;
+      font-display: swap;
+      font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Lora-Medium';
+  src: url('./fonts/Lora-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Lora-MediumItalic';
+  src: url('./fonts/Lora-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('./fonts/Lora-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora-SemiBold';
+  src: url('./fonts/Lora-SemiBold.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora-SemiBoldItalic';
+  src: url('./fonts/Lora-SemiBoldItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+      font-style: italic;
+}
