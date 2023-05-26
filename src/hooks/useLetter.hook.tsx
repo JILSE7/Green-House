@@ -5,7 +5,7 @@ import { GlossaryContext } from "../context/glossary/GlossaryContext";
 
 export const useLetter = () => {
   const [letterActive, setLetterActive] = useState<string>('A');
-  const { state: { glossaryTermsArray }, filterByLetter } = useContext(GlossaryContext);
+  const { filterByLetter } = useContext(GlossaryContext);
   const isFirstMounted = useRef<boolean>(true);
 
   const handleLetterActive = useCallback((letter: string) => {
@@ -23,7 +23,7 @@ export const useLetter = () => {
     }
 
     filterByLetter(letterActive);
-    
+
   }, [letterActive, filterByLetter])
 
   return {

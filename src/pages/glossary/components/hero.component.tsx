@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import {Card, Divider, Input} from "../../../components";
+import {Card, Divider} from "../../../components";
 import Button from "../../../components/button/button.component";
 import InputSearch from "./input-search";
 import { GlossaryContext } from "../../../context/glossary/GlossaryContext";

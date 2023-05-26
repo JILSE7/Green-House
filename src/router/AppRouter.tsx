@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/home/page';
 import UserPage from '../pages/users/page';
 import GlossaryPage from '../pages/glossary/page';
@@ -9,7 +9,7 @@ import { Header } from '../components';
 const AppRouter = () => {
   return (
     <div className='app'>
-      <BrowserRouter /* basename = {process.env.PUBLIC_URL} */ >
+      <HashRouter basename = {import.meta.env.BASE_URL} >
         <Header />
         <Routes>
           <Route path='/home' element={<HomePage />} />
@@ -19,7 +19,7 @@ const AppRouter = () => {
           <Route path='/log' element={<UserPage />} />
         </Routes>
 
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
