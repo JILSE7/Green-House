@@ -9,6 +9,7 @@
 @import "./components/card.styles.css";
 @import "./components/button.styles.css";
 @import "./components/divider.styles.css";
+@import "./components/modal.styles.css";
 
 @tailwind base;
 @tailwind components;
