@@ -1,9 +1,11 @@
 .header_container{
-  @apply w-full flex justify-between items-center bg-white;
+  @apply flex justify-between items-center bg-white;
   padding: 0px 24px;
   height: 64px;
-  border: 1px solid gray;
+  border-bottom: 1px solid var(--gray-header-color);
   margin-bottom: 36px;
+  width: 100vw;
+  max-width: 2000px;
 }
 
 .header_navbar {
@@ -19,6 +21,11 @@
 }
 
 .header_navbar  li:hover {
+  color: #1874D0;
+  border-bottom: 2px solid #1874D0;
+}
+
+.header_navbar .active_path {
   color: #1874D0;
   border-bottom: 2px solid #1874D0;
 }
