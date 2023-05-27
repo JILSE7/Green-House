@@ -1,6 +1,6 @@
 import { Hero, AbcMenu } from "./components/"
 import { useLetter } from "../../hooks";
-import GlossaryList from "./components/glossaryList";
+import GlossaryList from "./components/list/glossaryList.component";
 
 const GlossaryPage = () => {
   const { handleLetterActive, letterActive } = useLetter();
