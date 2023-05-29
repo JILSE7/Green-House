@@ -5,7 +5,6 @@ const Nav = () => {
   const {pathname} = useLocation();
 
   const handleNavigate = (path: string) => navigate(path);
-  console.log(pathname)
   return (
     <nav className='header_navbar cursor-pointer'>
       <ul className='flex'>

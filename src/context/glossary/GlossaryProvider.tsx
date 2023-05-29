@@ -32,7 +32,6 @@ export const GlossaryProvider: FC<{ children: ReactNode }> = ({ children }) => {
   };
 
   const filterByLetter = useCallback((letter: string) => {
-    console.log("DEBO FILTRAR POR LETRA", letter);
     const data = getGlossaryDataByLetter(letter, state.glossaryTerms);
 
     if (data) dispatch({ type: 'SET_GLOSSARY_BY_LETTER', payload: data })
