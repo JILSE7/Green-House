@@ -9,7 +9,7 @@ import { Header } from '../components';
 const AppRouter = () => {
   return (
     <div className='app'>
-      <BrowserRouter /* basename = {process.env.PUBLIC_URL} */ >
+      <BrowserRouter  basename={import.meta.env.DEV ? '/' : '/Green-House/'} >
         <Header />
         <Routes>
           <Route path='/home' element={<HomePage />} />
@@ -18,7 +18,6 @@ const AppRouter = () => {
           <Route path='/' element={<GlossaryPage />} />
           <Route path='/log' element={<UserPage />} />
         </Routes>
-
       </BrowserRouter>
     </div>
   )

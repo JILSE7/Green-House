@@ -3,6 +3,8 @@
   --white-color: #ffffff;
   --gray-color: #A3A3A3;
   --gray-secondary-color: #737373;
+  --gray-header-color: #D1D5DB;
+  --hover-gray-color: #F3F4F6;
   --blue-color: #1874D0;
   --dark-color: #262626;
   --orange-color: #EA580C;
@@ -44,6 +46,10 @@ html {
   @apply flex justify-between items-center;
 }
 
+
+.ReactModal__Overlay--after-open{
+  position: absolute !important;
+}
 
 
 /**

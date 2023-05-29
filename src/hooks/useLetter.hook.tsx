@@ -5,11 +5,10 @@ import { GlossaryContext } from "../context/glossary/GlossaryContext";
 
 export const useLetter = () => {
   const [letterActive, setLetterActive] = useState<string>('A');
-  const { state: { glossaryTermsArray }, filterByLetter } = useContext(GlossaryContext);
+  const { filterByLetter } = useContext(GlossaryContext);
   const isFirstMounted = useRef<boolean>(true);
 
   const handleLetterActive = useCallback((letter: string) => {
-    console.log("entro");
     if (letterActive === letter) return
     setLetterActive(letter)
   }, [letterActive]);
@@ -23,7 +22,7 @@ export const useLetter = () => {
     }
 
     filterByLetter(letterActive);
-    
+
   }, [letterActive, filterByLetter])
 
   return {

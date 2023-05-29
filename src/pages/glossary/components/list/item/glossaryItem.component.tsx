@@ -1,12 +1,14 @@
 import { FC } from "react"
+import { TermGlosary } from "../../../../../interfaces";
 
-interface IProps {
-  term: string
+export interface IProps {
+  openModal: (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>, data: TermGlosary) => void;
+  item: TermGlosary
 }
 
-const GlossaryItem: FC<IProps> = ({ term }) => {
+const GlossaryItem: FC<IProps> = ({ item, openModal }) => {
   return (
-    <p className="glossary_abc_content_card_terms_item">{term}</p>
+    <p onClick={(e) => openModal(e, item)} className="glossary_abc_content_card_terms_item cursor-pointer">{item.term}</p>
   )
 }
 

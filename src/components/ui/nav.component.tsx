@@ -1,17 +1,17 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Nav = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const {pathname} = useLocation();
 
   const handleNavigate = (path: string) => navigate(path);
-
   return (
     <nav className='header_navbar cursor-pointer'>
       <ul className='flex'>
-        <li onClick={() => handleNavigate("/home")}>Home</li>
-        <li onClick={() => handleNavigate("/users")}>Users</li>
-        <li onClick={() => handleNavigate("/glossary")}>Glossary</li>
-        <li onClick={() => handleNavigate("/log")}>Log</li>
+        <li className={pathname === "/home" ? 'active_path' : ''} onClick={() => handleNavigate("/home")}>Home</li>
+        <li className={pathname === "/users" ? 'active_path' : ''} onClick={() => handleNavigate("/users")}>Users</li>
+        <li className={pathname === "/glossary" || pathname === "/" ? 'active_path' : ''} onClick={() => handleNavigate("/glossary")}>Glossary</li>
+        <li className={pathname === "/log" ? 'active_path' : ''} onClick={() => handleNavigate("/log")}>Log</li>
       </ul>
     </nav>
   )
