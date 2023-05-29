@@ -24,7 +24,7 @@ export const GlossaryProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(glossaryReducer, initialState);
 
   const getGlossaryTerms = () => {
-    
+
     const glossaryTerms = getGlossaryData(data)
     const glossaryTermsArray = getGlossaryArrayData(glossaryTerms)
 
@@ -44,8 +44,6 @@ export const GlossaryProvider: FC<{ children: ReactNode }> = ({ children }) => {
     if (!search) return dispatch({ type: 'REMOVE_GLOSSARY_BY_SEARCH' });
 
     const dataBySearch = getGlossaryDataBySearch(search, data);
-
-    console.log({dataBySearch});
     
     dataBySearch ? dispatch({ type: 'SET_GLOSSARY_BY_SEARCH', payload: dataBySearch }) : dispatch({ type: 'REMOVE_GLOSSARY_BY_SEARCH' })
 

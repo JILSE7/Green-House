@@ -9,7 +9,6 @@ export const useLetter = () => {
   const isFirstMounted = useRef<boolean>(true);
 
   const handleLetterActive = useCallback((letter: string) => {
-    console.log("entro");
     if (letterActive === letter) return
     setLetterActive(letter)
   }, [letterActive]);

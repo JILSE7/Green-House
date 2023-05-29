@@ -36,7 +36,7 @@ const ModalDefinition: FC<IProps> = ({closeModal, state}) => {
     closeModal={closeModal}
     isOpen={state.isOpen}
     >
-      <>
+      <div className="animate__animated animate__fadeIn ">
         <h2 className="modal_title">{term}</h2>
         <span className="modal_subtitle">😄 Non-conformity</span>
         <p className="modal_definition">
@@ -47,7 +47,7 @@ const ModalDefinition: FC<IProps> = ({closeModal, state}) => {
         <blockquote cite="https://www.ejemplo.com/articulo">
           <p style={{ color: "#3B82F6" }}>{definition_by}</p>
         </blockquote>
-      </>
+      </div>
     </ModalComponent>
   )
 }

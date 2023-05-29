@@ -11,7 +11,7 @@ const Nav = () => {
       <ul className='flex'>
         <li className={pathname === "/home" ? 'active_path' : ''} onClick={() => handleNavigate("/home")}>Home</li>
         <li className={pathname === "/users" ? 'active_path' : ''} onClick={() => handleNavigate("/users")}>Users</li>
-        <li className={pathname === "/glossary" ? 'active_path' : ''} onClick={() => handleNavigate("/glossary")}>Glossary</li>
+        <li className={pathname === "/glossary" || pathname === "/" ? 'active_path' : ''} onClick={() => handleNavigate("/glossary")}>Glossary</li>
         <li className={pathname === "/log" ? 'active_path' : ''} onClick={() => handleNavigate("/log")}>Log</li>
       </ul>
     </nav>

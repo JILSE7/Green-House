@@ -15,7 +15,7 @@ const initialState: IState = {
 }
 
 
-const modalMap = ['modal_subtitle', 'modal_definition', 'modal_title', 'modal_container', 'glossary_abc_content_card_terms_item'];
+const modalMap = ['modal_subtitle', 'modal_definition', 'modal_title', 'modal_container', 'glossary_abc_content_card_terms_item', 'animate__animated'];
 
 const useDefinitionModal = () => {
   const [ModalState, setModalState] = useState<IState>(initialState);
@@ -25,8 +25,12 @@ const useDefinitionModal = () => {
   }
 
   function openModal (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>, data: TermGlosary) {
-    const {pageX, pageY} = e;
-    setModalState({isOpen: true, cords: {x: pageX, y: pageY}, data});
+    closeModal();
+    const id = setTimeout(() => {
+      const {pageX, pageY} = e;
+      setModalState({isOpen: true, cords: {x: pageX, y: pageY}, data});
+      clearTimeout(id);
+    }, 50);
   }
 
   const closeOutsideModal = useCallback((e: any) => {
