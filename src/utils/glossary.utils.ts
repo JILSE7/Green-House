@@ -56,7 +56,6 @@ export const getGlossaryDataBySearch = (search: string, data: TermGlosaryModel[]
 
   // const dataFiltered = data.filter((item) => item.term.toLocaleLowerCase().includes(search) || item.definition.toLocaleLowerCase().includes(search));
   const dataFiltered = data.filter((item) => item.term.toLocaleLowerCase().includes(search));
-  console.log({dataFiltered});
   if (dataFiltered.length === 0) null;
 
   const dataFilteredGlossary = getGlossaryData(dataFiltered);

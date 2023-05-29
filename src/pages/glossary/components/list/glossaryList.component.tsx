@@ -11,10 +11,10 @@ interface IProps {
 }
 
 const GlossaryList: FC<IProps> = ({ letterActive }) => {
-
   const reactId = useId();
   const { state: { glossaryByLetter, glossaryBySearch } } = useContext(GlossaryContext);
   const {ModalState, closeModal, openModal} = useDefinitionModal();
+
   return (
     <div className="glossary_abc_content">
       {
@@ -28,7 +28,6 @@ const GlossaryList: FC<IProps> = ({ letterActive }) => {
             </Card>
               {
                 i !== array.length - 1 && <Divider style={{ marginTop: 24, marginBottom: 24 }} />
-
               }
           </div>
         ))
@@ -39,4 +38,4 @@ const GlossaryList: FC<IProps> = ({ letterActive }) => {
   )
 }
 
-export default GlossaryList
+export default GlossaryList;
