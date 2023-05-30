@@ -54,6 +54,8 @@
 
 .header_user_language > span {
   font-size: 14px;
+  font-weight: 700;
+  color: #4B5563;
 } 
 
 .header_user_avatar {
@@ -62,4 +64,5 @@
   border-radius: 50%;
   background-color: #F87171;
   color: #fff5f5;
+  font-weight: 500;
 }

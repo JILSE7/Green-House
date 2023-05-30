@@ -13,10 +13,13 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(0, -50%)',
     with: '526px',
-    height: '364px',
+    height: 'auto',
     padding: '18px 24px',
+    border: 'none',
+    boxShadow: '0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1)'
+    
   },
 };
 
@@ -35,18 +38,18 @@ const ModalDefinition: FC<IProps> = ({ closeModal, state }) => {
     <ModalComponent
       styles={{
         ...customStyles, overlay:
-          { zIndex: 1000, top: `${state.cords.y + 200}px`, left: `${state.cords.x + 200}px`, backgroundColor: 'transparent' },
+          { zIndex: 1000, top: `${state.cords.y + (term.length >= 25 ? 190 : 170) }px`, left: `${state.cords.x - 46}px`, backgroundColor: 'transparent', boxShadow: '' },
       }}
       closeModal={closeModal}
       isOpen={state.isOpen}
     >
-      <div className="animate__animated animate__fadeIn ">
-        <div className="flex justify-between items-start">
-          <h2 className="modal_title">{term}d</h2>
-          <div className="flex-center">
-            <EditIcon className="modal_definition_actions" />
+      
+        <div className="animate__animated animate__fadeIn modal_actions flex justify-between items-start">
+          <h2 className="modal_title">{term}</h2>
+          <div className="flex-center actions">
+            <EditIcon className="modal_definition_actions cursor-pointer" />
 
-            <Delete className="modal_definition_actions ml-8" />
+            <Delete className="modal_definition_actions ml-8 cursor-pointer" />
           </div>
         </div>
         <span className="modal_subtitle">😄 Non-conformity</span>
@@ -57,8 +60,7 @@ const ModalDefinition: FC<IProps> = ({ closeModal, state }) => {
         <span>Definition by</span>
         <blockquote cite="https://www.ejemplo.com/articulo">
           <p style={{ color: "#3B82F6" }}>{definition_by}</p>
-        </blockquote>
-      </div>
+        </blockquote>      
     </ModalComponent>
   )
 }

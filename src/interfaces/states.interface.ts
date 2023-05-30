@@ -1,10 +1,10 @@
 import { GlossarySet } from "../models";
 
 export interface GlossaryState {
-  glossaryTerms : GlossaryTerms,
-  glossaryTermsArray : GlossaryTermsArray,
-  glossaryByLetter : GlossaryTermsArray
-  glossaryBySearch : GlossaryTermsArray
+  glossaryTerms : GlossaryTerms;
+  glossaryTermsArray : GlossaryTermsArray;
+  glossaryByLetter : GlossaryTermsArray;
+  glossaryBySearch : GlossaryTermsArray;
 }
 
 

@@ -24,7 +24,7 @@ const GlossaryList: FC<IProps> = ({ letterActive }) => {
               <div className={`glossary_abc_content_card_letter ${letterActive === letter && 'glossary_abc_content_card_letter_active'}`}>
                 <span>{letter}</span>
               </div>
-              <GlossaryColumns data={colums} openModal={openModal} />
+              <GlossaryColumns data={colums} closeModal={closeModal} openModal={openModal} />
             </Card>
               {
                 i !== array.length - 1 && <Divider style={{ marginTop: 24, marginBottom: 24 }} />

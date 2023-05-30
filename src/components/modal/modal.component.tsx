@@ -15,7 +15,7 @@ export interface IProps {
 const ModalComponent: FC<IProps> = ({ closeModal, styles, children, isOpen }) => {
 
   return (
-    <div className="modal_container">
+    <div className="modal_container" onMouseLeave={() => closeModal()}>
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
