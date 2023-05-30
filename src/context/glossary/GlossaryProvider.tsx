@@ -15,7 +15,6 @@ const initialState: GlossaryState = {
   glossaryTermsArray: {},
   glossaryByLetter: {},
   glossaryBySearch: {},
-  
 }
 
 
@@ -47,6 +46,7 @@ export const GlossaryProvider: FC<{ children: ReactNode }> = ({ children }) => {
     dataBySearch ? dispatch({ type: 'SET_GLOSSARY_BY_SEARCH', payload: dataBySearch }) : dispatch({ type: 'REMOVE_GLOSSARY_BY_SEARCH' })
 
   }, []);
+  
 
 
 

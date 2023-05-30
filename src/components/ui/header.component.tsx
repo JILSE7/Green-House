@@ -14,7 +14,7 @@ const Header = () => {
       <img src={greenHouseLogo}/>
       <Nav />
       <div className='header_user flex-between'>
-        <div className='header_user_language flex justify-evenly items-center'>
+        <div className='header_user_language flex justify-evenly items-center cursor-pointer'>
           <img src={greatBratain} alt="great_bratain" />
           <span>English</span>
           <WhateverIcon />
